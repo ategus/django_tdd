@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from lists.views import home_page
-
+from lists import views
 urlpatterns = [
    # path('', include('superlists.urls')),
-    re_path(r'^$', home_page),
+    re_path(r'^$', views.home_page),
     path('admin/', admin.site.urls),
 ]
